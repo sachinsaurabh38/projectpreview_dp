@@ -4,8 +4,8 @@
     "version" : "2.0",
     "x-WM-USE_PROXY_FOR_WEB" : true,
     "x-WM-USE_PROXY_FOR_MOBILE" : true,
-    "x-WM-API_ID" : "136266f1-24ac-4086-9247-de41efaffb1f",
-    "x-WM-SERVICE_ID" : "restapiexample",
+    "x-WM-API_ID" : "09679f16-f4bc-48d5-afa4-3aa067e24171",
+    "x-WM-SERVICE_ID" : "restapiexample2",
     "x-WM-SERVICE_TYPE" : "RestService"
   },
   "host" : "dummy.restapiexample.com",
@@ -21,7 +21,6 @@
         "tags" : [ "RestServiceVirtualController" ],
         "operationId" : "restapiexample_RestServiceVirtualController-invoke",
         "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
             "description" : "Success",
@@ -36,7 +35,7 @@
       "x-WM-BASE_PATH" : "/v1/employees",
       "x-WM-TAG" : "RestServiceVirtualController",
       "x-WM-RELATIVE_PATH" : "",
-      "x-WM-COMPLETE_PATH" : "${rest.restapiexample.scheme}://${rest.restapiexample.host}${rest.restapiexample.basepath}/v1/employees"
+      "x-WM-COMPLETE_PATH" : "${restapiexample.scheme}://${restapiexample.host}${restapiexample.basepath}/v1/employees"
     }
   },
   "definitions" : {

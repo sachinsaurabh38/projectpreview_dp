@@ -9,23 +9,8 @@
   "contentType" : "application/json",
   "multiParamInfoList" : null,
   "sampleHttpResponseDetails" : {
-    "statusCode" : 200,
-    "headers" : {
-      "Response" : [ "200" ],
-      "Date" : [ "Wed, 01 Apr 2020 04:53:10 GMT" ],
-      "Access-Control-Expose-Headers" : [ "Content-Type, X-Requested-With, X-authentication, X-client" ],
-      "Set-Cookie" : [ "ezoadgid_133674=-1; Path=/; Domain=restapiexample.com; Expires=Wed, 01 Apr 2020 05:23:10 UTC", "ezoref_133674=; Path=/; Domain=restapiexample.com; Expires=Wed, 01 Apr 2020 06:53:10 UTC", "ezoab_133674=mod54-c; Path=/; Domain=restapiexample.com; Expires=Wed, 01 Apr 2020 06:53:10 UTC", "active_template::133674=pub_site.1585716790; Path=/; Domain=restapiexample.com; Expires=Fri, 03 Apr 2020 04:53:10 UTC" ],
-      "Content-Type" : [ "application/json;charset=utf-8" ],
-      "Access-Control-Allow-Origin" : [ "*" ],
-      "Referrer-Policy" : [ "" ],
-      "X-Middleton-Response" : [ "200" ],
-      "Server" : [ "nginx/1.16.0" ],
-      "Vary" : [ "Accept-Encoding", "Accept-Encoding,User-Agent,X-APP-JSON" ],
-      "X-Sol" : [ "pub_site" ],
-      "Cache-Control" : [ "max-age=31536000" ],
-      "X-Ezoic-Cdn" : [ "Hit ds;mm;64e5dcd8fd074fe044e20470a9643699;2-133674-2;0fd2c37f-bc42-4861-758e-f4a7d7b1f8a4" ],
-      "Host-Header" : [ "c2hhcmVkLmJsdWVob3N0LmNvbQ==" ]
-    },
+    "statusCode" : 0,
+    "headers" : { },
     "responseBody" : "{\"status\":\"success\",\"data\":[{\"id\":\"1\",\"employee_name\":\"Tiger Nixon\",\"employee_salary\":\"320800\",\"employee_age\":\"61\",\"profile_image\":\"\"}]}",
     "convertedResponse" : null
   }

@@ -7,5 +7,14 @@ and is an ideal location for end-users to put any code they need.
 <beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<bean id="fawbPropertySource" class="com.wavemaker.runtime.property.impl.DbBasedPropertySource" init-method="init">
+        <property name="databaseSourceConfiguration" ref="dbSourceConfiguration"/>
+    </bean>
+    
+    <bean id="dbSourceConfiguration" class="com.wavemaker.runtime.property.config.JdbcConfiguration"> <property name="connectionUrl"
+     value="${dmpprofiles.url}"/>
+        <property name="driverClass" value="${dmpprofiles.driverClass}"/>
+        <property name="username" value="${dmpprofiles.username}"/>
+        <property name="password" value="${dmpprofiles.password}"/>
+    </bean>
 </beans>
