@@ -1,0 +1,10 @@
+[ {
+  "providerId" : "soapcc",
+  "authorizationUrl" : "manager.dms.usw2.ficoanalyticcloud.com",
+  "accessTokenUrl" : "manager.dms.usw2.ficoanalyticcloud.com/registration/rest/client/token",
+  "clientId" : "1jjothixhl7",
+  "clientSecret" : "wMX4joUtp06a4A603Obk781nxhm*Iw73294Z",
+  "sendAccessTokenAs" : "HEADER",
+  "accessTokenParamName" : "Bearer",
+  "scopes" : [ ]
+} ]

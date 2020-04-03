@@ -1,0 +1,83 @@
+{
+  "basePath" : "${rest.restapiexample.basepath}",
+  "paths" : {
+    "/v1/employees" : {
+      "x-WM-BASE_PATH" : "/v1/employees",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "restapiexample_RestServiceVirtualController-invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "tags" : [ "RestServiceVirtualController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.restapiexample.scheme}://${rest.restapiexample.host}${rest.restapiexample.basepath}/v1/employees"
+    }
+  },
+  "host" : "${rest.restapiexample.host}",
+  "schemes" : [ "${rest.restapiexample.scheme}" ],
+  "definitions" : {
+    "dataEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restapiexample.dataEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "employee_age", "employee_name", "employee_salary", "id", "profile_image" ],
+      "properties" : {
+        "profile_image" : {
+          "type" : "string"
+        },
+        "employee_name" : {
+          "type" : "string"
+        },
+        "employee_salary" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "employee_age" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restapiexample.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "data", "status" ],
+      "properties" : {
+        "data" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/dataEntryItem"
+          }
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "136266f1-24ac-4086-9247-de41efaffb1f",
+    "x-WM-SERVICE_ID" : "restapiexample",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ]
+}

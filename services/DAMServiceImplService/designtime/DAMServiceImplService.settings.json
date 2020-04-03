@@ -1,0 +1,19 @@
+{
+  "authDetails" : {
+    "grantType" : "CLIENT_CREDENTIALS",
+    "providerId" : "soapcc",
+    "type" : "OAUTH2"
+  },
+  "authDecoratorFactory" : null,
+  "endpointAddress" : "https://28734ldwa57-28734ldwa57.dms.usw2.ficoanalyticcloud.com:443/DAMService/solutionid",
+  "connectionTimeout" : 10000,
+  "requestTimeout" : 10000,
+  "soapActionURI" : null,
+  "packageName" : "com.fico.dmp.services.damserviceimplservice",
+  "wsdlLocation" : "https://28734ldwa57-28734ldwa57.dms.usw2.ficoanalyticcloud.com/DAMService/solutionid/1jjothixhl7?wsdl",
+  "wsdlSource" : "URL",
+  "bindingsFile" : null,
+  "wsdlFile" : "DAMServiceImplService.wsdl",
+  "httpHeaders" : { },
+  "requestContextProperties" : null
+}

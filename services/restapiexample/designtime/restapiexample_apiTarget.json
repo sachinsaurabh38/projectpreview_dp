@@ -1,0 +1,83 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "136266f1-24ac-4086-9247-de41efaffb1f",
+    "x-WM-SERVICE_ID" : "restapiexample",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "host" : "dummy.restapiexample.com",
+  "basePath" : "/api",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/v1/employees" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "restapiexample_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/v1/employees",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.restapiexample.scheme}://${rest.restapiexample.host}${rest.restapiexample.basepath}/v1/employees"
+    }
+  },
+  "definitions" : {
+    "dataEntryItem" : {
+      "required" : [ "employee_age", "employee_name", "employee_salary", "id", "profile_image" ],
+      "properties" : {
+        "profile_image" : {
+          "type" : "string"
+        },
+        "employee_name" : {
+          "type" : "string"
+        },
+        "employee_salary" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "employee_age" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restapiexample.dataEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponse" : {
+      "required" : [ "data", "status" ],
+      "properties" : {
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/dataEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "status" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restapiexample.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

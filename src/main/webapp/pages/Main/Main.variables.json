@@ -1,0 +1,79 @@
+{
+  "DAMServiceImplServiceGetConsumerReportData" : {
+    "_id" : "wm-DAMServiceImplServiceGetConsumerReportData-wm.ServiceVariable-1585721215267",
+    "name" : "DAMServiceImplServiceGetConsumerReportData",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "GetConsumerReportData.params.entry",
+      "value" : "bind:Variables.soapvar.dataSet.entry"
+    }, {
+      "target" : "GetConsumerReportData.consumerProviderType",
+      "value" : "bind:\"EquifaxUSConsumer\""
+    }, {
+      "target" : "GetConsumerReportData.omApplication",
+      "value" : "bind:\"<OMApplication><OM_creditRequest/>\\<personalApplicants/></OMApplication>\""
+    }, {
+      "target" : "GetConsumerReportData.subscriber",
+      "value" : "bind:\"FICO-FIELD-TENANT\""
+    } ],
+    "type" : "com.fico.dmp.services.damserviceimplservice.GetConsumerReportDataResponse",
+    "service" : "DAMServiceImplService",
+    "operation" : "getConsumerReportData",
+    "operationId" : "DAMServiceImplServiceController_getConsumerReportData",
+    "operationType" : "post",
+    "serviceType" : "SoapService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "DAMServiceImplService"
+  },
+  "RestapiexampleInvoke" : {
+    "_id" : "wm-RestapiexampleInvoke-wm.ServiceVariable-1585716816068",
+    "name" : "RestapiexampleInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "restapiexample.RootResponse",
+    "service" : "restapiexample",
+    "operation" : "invoke",
+    "operationId" : "restapiexample_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "RestServiceVirtual"
+  },
+  "soapvar" : {
+    "_id" : "wm-soapvar-wm.Variable-1585723034873",
+    "name" : "soapvar",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "entry" : [ {
+        "key" : "DAMEnvironmentProductionFlag",
+        "value" : "false"
+      }, {
+        "key" : "type",
+        "value" : "SOFT"
+      } ]
+    },
+    "type" : "entry",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

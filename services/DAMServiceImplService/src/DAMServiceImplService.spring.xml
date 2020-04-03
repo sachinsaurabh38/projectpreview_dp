@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.fico.dmp.services.damserviceimplservice.controller,com.fico.dmp.services.damserviceimplservice.services "/>
+     <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+            <property name="locations">
+                <list>
+                    <value>
+                        classpath:DAMServiceImplService.properties
+                    </value>
+                </list>
+            </property>
+            <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        </bean>
+
+    <bean id="DAMServiceImplServiceSoapServiceSettings" class="com.wavemaker.runtime.soap.SoapServiceSettings">
+            <property name="endpointAddress" value="${DAMServiceImplService.endpoint}"/>
+            <property name="connectionTimeout" value="${DAMServiceImplService.connectionTimeout}"/>
+            <property name="requestTimeout" value="${DAMServiceImplService.requestTimeout}"/>
+            <property name="authDetails" ref="DAMServiceImplServiceSoapSecurity"/>
+            <property name="wsdlFile" value="DAMServiceImplService.wsdl"/>
+            <property name="httpHeaders">
+             <map>
+            </map>
+           </property>
+           <property name="requestContextProperties">
+             <map>
+                <entry key="javax.xml.soap.character-set-encoding" value="UTF-8"/>
+             </map>
+           </property>
+
+    </bean>
+    <bean id="DAMServiceImplServiceSoapSecurity" class="com.wavemaker.runtime.security.soap.impl.Oauth2AuthDetails">
+        <property name="grantType" value="${DAMServiceImplService.grantType}"/>
+        <property name="providerId" value="${DAMServiceImplService.providerId}"/>
+     </bean>
+</beans>

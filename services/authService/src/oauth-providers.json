@@ -1,0 +1,10 @@
+[ {
+  "providerId" : "soapcc",
+  "authorizationUrl" : "${oauth2.soapcc.authorizationUrl}",
+  "accessTokenUrl" : "${oauth2.soapcc.accessTokenUrl}",
+  "clientId" : "${oauth2.soapcc.clientId}",
+  "clientSecret" : "${oauth2.soapcc.clientSecret}",
+  "sendAccessTokenAs" : null,
+  "accessTokenParamName" : null,
+  "scopes" : [ ]
+} ]

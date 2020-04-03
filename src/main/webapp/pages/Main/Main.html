@@ -1,0 +1,26 @@
+<wm-page name="mainpage" pagetitle="Main">
+    <wm-header content="header" name="header" height="auto"></wm-header>
+    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
+    <wm-content name="content">
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-table name="restapiexampleTable1" title="" dataset="bind:Variables.RestapiexampleInvoke.dataSet" navigation="Basic">
+                <wm-table-column binding="status" caption="Status" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="data[0].profile_image" caption="Data[0] Profile Image" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="data[0].employee_name" caption="Data[0] Employee Name" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="data[0].employee_salary" caption="Data[0] Employee Salary" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="data[0].id" caption="Data[0] Id" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="data[0].employee_age" caption="Data[0] Employee Age" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+            </wm-table>
+            <wm-composite name="composite1">
+                <wm-label class="col-md-3 control-label" name="label1"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-date name="date1" datavalue="bind:CURRENT_DATE - 1"></wm-date>
+                </wm-container>
+            </wm-composite>
+            <wm-table name="getConsumerReportDataTable1" title="" dataset="bind:Variables.DAMServiceImplServiceGetConsumerReportData.dataSet" navigation="Basic">
+                <wm-table-column binding="omApplication" caption="Om Application" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+            </wm-table>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="footer" content="footer"></wm-footer>
+</wm-page>
