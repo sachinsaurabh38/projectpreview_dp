@@ -4,6 +4,8 @@
     <import resource="classpath:MyJavaService.spring.xml"/>
     <import resource="classpath:authService.spring.xml"/>
     <import resource="classpath:dmpprofiles.spring.xml"/>
+    <import resource="classpath:dms.spring.xml"/>
+    <import resource="classpath:dms2ja.spring.xml"/>
     <import resource="classpath:restapiexample.spring.xml"/>
     <import resource="classpath:securityService.spring.xml"/>
 </beans>

@@ -1,0 +1,32 @@
+{
+  "endpointAddress" : "https://instance-yau9bwks.dms.dev.usw2.ficoanalyticcloud.com/prefabs/prefabdev_1/myJava/prefabString",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : { },
+  "authDetails" : {
+    "type" : "DMPAUTH"
+  },
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "content-security-policy" : [ "frame-ancestors 'self'" ],
+      "Date" : [ "Fri, 03 Apr 2020 10:42:02 GMT" ],
+      "set-cookie" : [ "JSESSIONID=31BEAF96FAE874B40CBA9B314084533D; Path=/; Secure; HttpOnly", "wm_xsrf_token=ffe27d94-0b0f-4c9f-a93d-498fe8d2dd4a; Path=/; Secure" ],
+      "cache-control" : [ "max-age=0" ],
+      "x-content-type-options" : [ "nosniff" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "x-xss-protection" : [ "1; mode=block" ],
+      "x-envoy-upstream-service-time" : [ "10" ],
+      "Strict-Transport-Security" : [ "max-age=15724800; includeSubDomains" ],
+      "Content-Length" : [ "14" ],
+      "etag" : [ "\"074d150db148060d158f891baa53ad871\"" ]
+    },
+    "responseBody" : "\"prefabString\"",
+    "convertedResponse" : null
+  }
+}

@@ -48,6 +48,20 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/dms/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/dms2ja/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/restapiexample/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -145,6 +159,8 @@
                                 <source>services/MyJavaService/src</source>
                                 <source>services/authService/src</source>
                                 <source>services/dmpprofiles/src</source>
+                                <source>services/dms/src</source>
+                                <source>services/dms2ja/src</source>
                                 <source>services/restapiexample/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
