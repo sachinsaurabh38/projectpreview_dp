@@ -57,6 +57,28 @@
     "isDefault" : true,
     "controller" : "RestServiceVirtual"
   },
+  "serviceVariable1" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1585910339959",
+    "name" : "serviceVariable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "string",
+    "service" : "MyJavaService",
+    "operation" : "getRun",
+    "operationId" : "MyJavaController_getRun",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "MyJava"
+  },
   "soapvar" : {
     "_id" : "wm-soapvar-wm.Variable-1585723034873",
     "name" : "soapvar",

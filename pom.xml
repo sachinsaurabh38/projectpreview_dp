@@ -20,6 +20,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/MyJavaService/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/authService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -135,6 +142,7 @@
                         <configuration>
                             <sources>
                                 <source>services/DAMServiceImplService/src</source>
+                                <source>services/MyJavaService/src</source>
                                 <source>services/authService/src</source>
                                 <source>services/dmpprofiles/src</source>
                                 <source>services/restapiexample/src</source>
