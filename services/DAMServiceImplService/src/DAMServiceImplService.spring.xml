@@ -16,12 +16,12 @@
                 </list>
             </property>
             <property name="ignoreUnresolvablePlaceholders" value="true"/>
+            <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+            <property name="searchSystemEnvironment" value="true"/>
         </bean>
 
-    <bean id="DAMServiceImplServiceSoapServiceSettings" class="com.wavemaker.runtime.soap.SoapServiceSettings">
-            <property name="endpointAddress" value="${DAMServiceImplService.endpoint}"/>
-            <property name="connectionTimeout" value="${DAMServiceImplService.connectionTimeout}"/>
-            <property name="requestTimeout" value="${DAMServiceImplService.requestTimeout}"/>
+    <bean id="DAMServiceImplServiceSoapServiceSettings" class="com.wavemaker.runtime.soap.EnvSoapServiceSettings">
+            <property name="serviceId" value="DAMServiceImplService"/>
             <property name="authDetails" ref="DAMServiceImplServiceSoapSecurity"/>
             <property name="wsdlFile" value="DAMServiceImplService.wsdl"/>
             <property name="httpHeaders">
@@ -36,7 +36,7 @@
 
     </bean>
     <bean id="DAMServiceImplServiceSoapSecurity" class="com.wavemaker.runtime.security.soap.impl.Oauth2AuthDetails">
-        <property name="grantType" value="${DAMServiceImplService.grantType}"/>
-        <property name="providerId" value="${DAMServiceImplService.providerId}"/>
+        <property name="grantType" value="CLIENT_CREDENTIALS"/>
+        <property name="providerId" value="soapcc"/>
      </bean>
 </beans>

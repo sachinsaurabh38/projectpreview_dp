@@ -4,7 +4,6 @@
     "providerId" : "soapcc",
     "type" : "OAUTH2"
   },
-  "authDecoratorFactory" : null,
   "endpointAddress" : "https://28734ldwa57-28734ldwa57.dms.usw2.ficoanalyticcloud.com:443/DAMService/solutionid",
   "connectionTimeout" : 10000,
   "requestTimeout" : 10000,

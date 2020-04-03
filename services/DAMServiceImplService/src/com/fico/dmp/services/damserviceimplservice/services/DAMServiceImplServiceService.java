@@ -5,7 +5,7 @@ import com.fico.dmp.services.damserviceimplservice.*;
 import java.util.List;
 
 import com.wavemaker.runtime.soap.util.SoapSettingsResolver;
-import com.wavemaker.runtime.soap.SoapServiceSettings;
+import com.wavemaker.runtime.soap.EnvSoapServiceSettings;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +19,14 @@ public class DAMServiceImplServiceService{
 
     @Autowired
     @Qualifier("DAMServiceImplServiceSoapServiceSettings")
-    private SoapServiceSettings soapServiceSettings;
+    private EnvSoapServiceSettings envSoapServiceSettings;
 
 
 	public GetBusinessSearchDataResponse getBusinessSearchData(  com.fico.dmp.services.damserviceimplservice.GetBusinessSearchData parameters )
 	          {
  	    DAMServiceImplService damserviceimplservice = new DAMServiceImplService();
  DAMService damservice = damserviceimplservice.getDAMServiceImplPort();
- SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, soapServiceSettings);
+ SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, envSoapServiceSettings.getSettings());
  return damservice.getBusinessSearchData(parameters );
 	}
 
@@ -34,7 +34,7 @@ public class DAMServiceImplServiceService{
 	          {
  	    DAMServiceImplService damserviceimplservice = new DAMServiceImplService();
  DAMService damservice = damserviceimplservice.getDAMServiceImplPort();
- SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, soapServiceSettings);
+ SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, envSoapServiceSettings.getSettings());
  return damservice.getBusinessReportData(parameters );
 	}
 
@@ -42,7 +42,7 @@ public class DAMServiceImplServiceService{
 	          {
  	    DAMServiceImplService damserviceimplservice = new DAMServiceImplService();
  DAMService damservice = damserviceimplservice.getDAMServiceImplPort();
- SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, soapServiceSettings);
+ SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, envSoapServiceSettings.getSettings());
  return damservice.getBusinessSearchReportData(parameters );
 	}
 
@@ -50,7 +50,7 @@ public class DAMServiceImplServiceService{
 	          {
  	    DAMServiceImplService damserviceimplservice = new DAMServiceImplService();
  DAMService damservice = damserviceimplservice.getDAMServiceImplPort();
- SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, soapServiceSettings);
+ SoapSettingsResolver.setBindingProperties((BindingProvider)damservice, envSoapServiceSettings.getSettings());
  return damservice.getConsumerReportData(parameters );
 	}
 }

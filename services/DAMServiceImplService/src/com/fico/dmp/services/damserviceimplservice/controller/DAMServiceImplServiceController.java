@@ -15,6 +15,11 @@ import com.fico.dmp.services.damserviceimplservice.GetConsumerReportDataResponse
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
+import com.wordnik.swagger.annotations.Api;
+import com.wordnik.swagger.annotations.ApiOperation;
+import com.wordnik.swagger.annotations.ApiParam;
+import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
+import com.wavemaker.tools.api.core.models.AccessSpecifier;
 
 @RestController
 @RequestMapping(value = "/dAMServiceImplServiceController")
@@ -25,21 +30,29 @@ public class DAMServiceImplServiceController {
     private DAMServiceImplServiceService dAMServiceImplServiceService;
 
     @RequestMapping(value = "/businessReportData", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "")
     public GetBusinessReportDataResponse getBusinessReportData(@RequestBody GetBusinessReportData parameters) {
         return dAMServiceImplServiceService.getBusinessReportData(parameters);
     }
 
     @RequestMapping(value = "/businessSearchData", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "")
     public GetBusinessSearchDataResponse getBusinessSearchData(@RequestBody GetBusinessSearchData parameters) {
         return dAMServiceImplServiceService.getBusinessSearchData(parameters);
     }
 
     @RequestMapping(value = "/businessSearchReportData", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "")
     public GetBusinessSearchReportDataResponse getBusinessSearchReportData(@RequestBody GetBusinessSearchReportData parameters) {
         return dAMServiceImplServiceService.getBusinessSearchReportData(parameters);
     }
 
     @RequestMapping(value = "/consumerReportData", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "")
     public GetConsumerReportDataResponse getConsumerReportData(@RequestBody GetConsumerReportData parameters) {
         return dAMServiceImplServiceService.getConsumerReportData(parameters);
     }
