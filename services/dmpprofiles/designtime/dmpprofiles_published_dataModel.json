@@ -157,10 +157,10 @@
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
+        "type" : "app-environment-defined",
+        "name" : "randomvar"
       },
-      "constraintList" : null,
+      "constraintList" : [ ],
       "fieldName" : "column2",
       "foreignKey" : false,
       "generatorType" : "assigned",

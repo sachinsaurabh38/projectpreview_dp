@@ -1,0 +1,284 @@
+{
+  "basePath" : "${restcountries.basepath}",
+  "paths" : {
+    "/v2/all" : {
+      "x-WM-BASE_PATH" : "/v2/all",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "restcountries_RestServiceVirtualController-invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-IS_LIST" : true,
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RootResponseROOTEntryItem"
+              }
+            },
+            "description" : "Success"
+          }
+        },
+        "tags" : [ "RestServiceVirtualController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${restcountries.scheme}://${restcountries.host}${restcountries.basepath}/v2/all"
+    }
+  },
+  "host" : "${restcountries.host}",
+  "schemes" : [ "${restcountries.scheme}" ],
+  "definitions" : {
+    "regionalBlocsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.regionalBlocsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "acronym", "name", "otherAcronyms", "otherNames" ],
+      "properties" : {
+        "otherNames" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "acronym" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "otherAcronyms" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "currenciesEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.currenciesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "code", "name", "symbol" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "code" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "languagesEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.languagesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "iso639_1", "iso639_2", "name", "nativeName" ],
+      "properties" : {
+        "nativeName" : {
+          "type" : "string"
+        },
+        "iso639_2" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "iso639_1" : {
+          "type" : "string"
+        }
+      }
+    },
+    "translations" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.translations",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "br", "de", "es", "fa", "fr", "hr", "it", "ja", "nl", "pt" ],
+      "properties" : {
+        "br" : {
+          "type" : "string"
+        },
+        "de" : {
+          "type" : "string"
+        },
+        "pt" : {
+          "type" : "string"
+        },
+        "ja" : {
+          "type" : "string"
+        },
+        "hr" : {
+          "type" : "string"
+        },
+        "it" : {
+          "type" : "string"
+        },
+        "fa" : {
+          "type" : "string"
+        },
+        "fr" : {
+          "type" : "string"
+        },
+        "es" : {
+          "type" : "string"
+        },
+        "nl" : {
+          "type" : "string"
+        }
+      }
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.java.lang.Object",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponseROOTEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "alpha2Code", "alpha3Code", "altSpellings", "area", "borders", "callingCodes", "capital", "cioc", "currencies", "demonym", "flag", "gini", "languages", "latlng", "name", "nativeName", "numericCode", "population", "region", "regionalBlocs", "subregion", "timezones", "topLevelDomain", "translations" ],
+      "properties" : {
+        "area" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "nativeName" : {
+          "type" : "string"
+        },
+        "capital" : {
+          "type" : "string"
+        },
+        "demonym" : {
+          "type" : "string"
+        },
+        "flag" : {
+          "type" : "string"
+        },
+        "alpha2Code" : {
+          "type" : "string"
+        },
+        "languages" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/languagesEntryItem"
+          }
+        },
+        "borders" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "subregion" : {
+          "type" : "string"
+        },
+        "callingCodes" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "regionalBlocs" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/regionalBlocsEntryItem"
+          }
+        },
+        "gini" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "population" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "numericCode" : {
+          "type" : "string"
+        },
+        "alpha3Code" : {
+          "type" : "string"
+        },
+        "topLevelDomain" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "timezones" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "cioc" : {
+          "type" : "string"
+        },
+        "translations" : {
+          "$ref" : "#/definitions/translations"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "altSpellings" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "region" : {
+          "type" : "string"
+        },
+        "latlng" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "format" : "int32",
+            "type" : "integer"
+          }
+        },
+        "currencies" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/currenciesEntryItem"
+          }
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "RootResponseROOT" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/RootResponseROOTEntryItem"
+          }
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "e740a8fb-3a91-4e52-8cea-191f7cfbfe08",
+    "x-WM-SERVICE_ID" : "restcountries",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ]
+}

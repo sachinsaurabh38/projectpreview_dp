@@ -69,6 +69,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/restcountries/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/securityService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -162,6 +169,7 @@
                                 <source>services/dms/src</source>
                                 <source>services/dms2ja/src</source>
                                 <source>services/restapiexample/src</source>
+                                <source>services/restcountries/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
                         </configuration>

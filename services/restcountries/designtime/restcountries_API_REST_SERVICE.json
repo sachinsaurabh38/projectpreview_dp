@@ -1,0 +1,284 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "e740a8fb-3a91-4e52-8cea-191f7cfbfe08",
+    "x-WM-SERVICE_ID" : "restcountries",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "host" : "restcountries.eu",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/restcountries/invoke/v2/all" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "restcountries_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RootResponseROOTEntryItem"
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/restcountries/invoke/v2/all",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${restcountries.scheme}://${restcountries.host}${restcountries.basepath}/v2/all"
+    }
+  },
+  "definitions" : {
+    "regionalBlocsEntryItem" : {
+      "required" : [ "acronym", "name", "otherAcronyms", "otherNames" ],
+      "properties" : {
+        "otherNames" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "acronym" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "otherAcronyms" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.regionalBlocsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "currenciesEntryItem" : {
+      "required" : [ "code", "name", "symbol" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "code" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.currenciesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "languagesEntryItem" : {
+      "required" : [ "iso639_1", "iso639_2", "name", "nativeName" ],
+      "properties" : {
+        "nativeName" : {
+          "type" : "string"
+        },
+        "iso639_2" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "iso639_1" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.languagesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "translations" : {
+      "required" : [ "br", "de", "es", "fa", "fr", "hr", "it", "ja", "nl", "pt" ],
+      "properties" : {
+        "br" : {
+          "type" : "string"
+        },
+        "de" : {
+          "type" : "string"
+        },
+        "pt" : {
+          "type" : "string"
+        },
+        "ja" : {
+          "type" : "string"
+        },
+        "hr" : {
+          "type" : "string"
+        },
+        "it" : {
+          "type" : "string"
+        },
+        "fa" : {
+          "type" : "string"
+        },
+        "fr" : {
+          "type" : "string"
+        },
+        "es" : {
+          "type" : "string"
+        },
+        "nl" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.translations",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.java.lang.Object",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponseROOTEntryItem" : {
+      "required" : [ "alpha2Code", "alpha3Code", "altSpellings", "area", "borders", "callingCodes", "capital", "cioc", "currencies", "demonym", "flag", "gini", "languages", "latlng", "name", "nativeName", "numericCode", "population", "region", "regionalBlocs", "subregion", "timezones", "topLevelDomain", "translations" ],
+      "properties" : {
+        "area" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "nativeName" : {
+          "type" : "string"
+        },
+        "capital" : {
+          "type" : "string"
+        },
+        "demonym" : {
+          "type" : "string"
+        },
+        "flag" : {
+          "type" : "string"
+        },
+        "alpha2Code" : {
+          "type" : "string"
+        },
+        "languages" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/languagesEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "borders" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "subregion" : {
+          "type" : "string"
+        },
+        "callingCodes" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "regionalBlocs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/regionalBlocsEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "gini" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "population" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "numericCode" : {
+          "type" : "string"
+        },
+        "alpha3Code" : {
+          "type" : "string"
+        },
+        "topLevelDomain" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "timezones" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "cioc" : {
+          "type" : "string"
+        },
+        "translations" : {
+          "$ref" : "#/definitions/translations"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "altSpellings" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "region" : {
+          "type" : "string"
+        },
+        "latlng" : {
+          "type" : "array",
+          "items" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "currencies" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/currenciesEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponse" : {
+      "required" : [ "RootResponseROOT" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/RootResponseROOTEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "restcountries.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}
