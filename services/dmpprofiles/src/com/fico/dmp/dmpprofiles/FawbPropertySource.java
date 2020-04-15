@@ -37,7 +37,7 @@ public class FawbPropertySource implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "`PROPERTY_KEY`", nullable = true, length = 255)
+    @Column(name = "`PROPERTY_KEY`", nullable = false, length = 255)
     public String getPropertyKey() {
         return this.propertyKey;
     }

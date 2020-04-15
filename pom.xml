@@ -513,7 +513,7 @@
         <profile.props.file>development.properties</profile.props.file>
         <spring.security.version>5.1.6.RELEASE</spring.security.version>
         <JWS_HOME>/opt/webserver</JWS_HOME>
-        <wavemaker.studio.version>10.0.12</wavemaker.studio.version>
+        <wavemaker.studio.version>10.1.1</wavemaker.studio.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.lib.directory>${basedir}/lib</project.lib.directory>
     </properties>

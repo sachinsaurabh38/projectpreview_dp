@@ -1,0 +1,7 @@
+-- MIGRATION SCRIPT
+-- Database Type: DBType{type='mysql', urlScheme='jdbc:', dialect='org.hibernate.dialect.MySQLDialect', driverClass='com.mysql.jdbc.Driver'}
+-- App Name: projectpreview_dp
+-- Database: dmpprofiles
+-- Created At: 13-Apr-2020 11:35:31.UTC
+-- Script Version: 3.0
+-- -----------------------------------------------------------------

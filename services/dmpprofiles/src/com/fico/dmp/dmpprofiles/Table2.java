@@ -41,7 +41,7 @@ public class Table2 implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "`COLUMN2`", nullable = true, length = 255)
+    @Column(name = "`COLUMN2`", nullable = false, length = 255)
     public String getColumn2() {
         return this.column2;
     }
